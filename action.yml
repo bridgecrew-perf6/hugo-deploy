@@ -1,0 +1,9 @@
+name: 'hugo-deploy'
+author: 'okir'
+description: 'Deploy your Hugo site to githib.io. Very custom approach.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'arrow-up-circle'  
+  color: 'red'
