@@ -85,7 +85,7 @@ if [[ -f "${SITE_SOURCE_DIR}/keep_files.txt" ]]; then
   FF_CMD='xargs realpath -e -q --relative-base="." | grep -vE "^\/"'
   cat "${SITE_SOURCE_DIR}/keep_files.txt" | eval "${FF_CMD}" | xargs rm -rf 
   cd "${SITE_DST_REPO_TARGET_BACKUP_DIR}/."
-  cat "${SITE_SOURCE_DIR}/keep_files.txt" | eval "${FF_CMD}" | xargs cp -a --parents -t "${SITE_DST_REPO_DIR}/${DEPLOY_DEST_DIR}"
+  cat "${SITE_SOURCE_DIR}/keep_files.txt" | eval "${FF_CMD}" | xargs cp -a --parents -t "${SITE_DST_REPO_DIR}/${DEPLOY_DEST_DIR}" || true
   popd
 fi
 
